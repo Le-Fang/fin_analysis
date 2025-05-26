@@ -1,0 +1,1680 @@
+﻿{
+  "nodes": [
+    {
+      "id": 0,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "1999"
+      }
+    },
+    {
+      "id": 1,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "2000"
+      }
+    },
+    {
+      "id": 2,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "2001"
+      }
+    },
+    {
+      "id": 3,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "2002"
+      }
+    },
+    {
+      "id": 4,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "2003"
+      }
+    },
+    {
+      "id": 5,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "S&P 500"
+      }
+    },
+    {
+      "id": 6,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "1900"
+      }
+    },
+    {
+      "id": 7,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "S&P 500 index"
+      }
+    },
+    {
+      "id": 8,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "recession"
+      }
+    },
+    {
+      "id": 9,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "expansion"
+      }
+    },
+    {
+      "id": 10,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "2004-12-31"
+      }
+    },
+    {
+      "id": 11,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "2005-12-31"
+      }
+    },
+    {
+      "id": 12,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "2003-12-31"
+      }
+    },
+    {
+      "id": 13,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Commonwealth Bank Why do Interest Rates Change?"
+      }
+    },
+    {
+      "id": 14,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "2008-10-16"
+      }
+    },
+    {
+      "id": 15,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "t i"
+      }
+    },
+    {
+      "id": 16,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "s j"
+      }
+    },
+    {
+      "id": 17,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Future value"
+      }
+    },
+    {
+      "id": 18,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Present value"
+      }
+    },
+    {
+      "id": 19,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Annuity derivation"
+      }
+    },
+    {
+      "id": 20,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "annuity"
+      }
+    },
+    {
+      "id": 21,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "perpetuity formula"
+      }
+    },
+    {
+      "id": 22,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "annuity formula"
+      }
+    },
+    {
+      "id": 23,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "continuous compound interest rate equivalent"
+      }
+    },
+    {
+      "id": 24,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Continuous compounding"
+      }
+    },
+    {
+      "id": 25,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Black–Scholes formula"
+      }
+    },
+    {
+      "id": 26,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Financial management"
+      }
+    },
+    {
+      "id": 27,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "profits"
+      }
+    },
+    {
+      "id": 28,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "taxes"
+      }
+    },
+    {
+      "id": 29,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "discount rate"
+      }
+    },
+    {
+      "id": 30,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "valuation"
+      }
+    },
+    {
+      "id": 31,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "PEG ratio"
+      }
+    },
+    {
+      "id": 32,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Stock valuation"
+      }
+    },
+    {
+      "id": 33,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Brazilian real"
+      }
+    },
+    {
+      "id": 34,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Mexican peso"
+      }
+    },
+    {
+      "id": 35,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "euro"
+      }
+    },
+    {
+      "id": 36,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "dollar"
+      }
+    },
+    {
+      "id": 37,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "foreign exchange market"
+      }
+    },
+    {
+      "id": 38,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "currencies"
+      }
+    },
+    {
+      "id": 39,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "interim financial statements"
+      }
+    },
+    {
+      "id": 40,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "final financial statements"
+      }
+    },
+    {
+      "id": 41,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "In-dividend date"
+      }
+    },
+    {
+      "id": 42,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Ex-dividend date"
+      }
+    },
+    {
+      "id": 43,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "stock buyback"
+      }
+    },
+    {
+      "id": 44,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "stock"
+      }
+    },
+    {
+      "id": 45,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "David Dodd"
+      }
+    },
+    {
+      "id": 46,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Benjamin Graham"
+      }
+    },
+    {
+      "id": 47,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Ace Hardware"
+      }
+    },
+    {
+      "id": 48,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Mar 22, 2001"
+      }
+    },
+    {
+      "id": 49,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "S&P/Barra Indexes"
+      }
+    },
+    {
+      "id": 50,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "December 13, 2007"
+      }
+    },
+    {
+      "id": 51,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Hedge fund"
+      }
+    },
+    {
+      "id": 52,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "actively managed"
+      }
+    },
+    {
+      "id": 53,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Amsterdam Stock Exchange"
+      }
+    },
+    {
+      "id": 54,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "1602"
+      }
+    },
+    {
+      "id": 55,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "New York Stock Exchange"
+      }
+    },
+    {
+      "id": 56,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "1792"
+      }
+    },
+    {
+      "id": 57,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Amazon"
+      }
+    },
+    {
+      "id": 58,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "1997"
+      }
+    },
+    {
+      "id": 59,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Dutch East India Company"
+      }
+    },
+    {
+      "id": 60,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "debt"
+      }
+    },
+    {
+      "id": 61,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "cost of debt"
+      }
+    },
+    {
+      "id": 62,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "SPDR S&P 500 ETF"
+      }
+    },
+    {
+      "id": 63,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "S&P 500 Index"
+      }
+    },
+    {
+      "id": 64,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Consumer Staples ETF"
+      }
+    },
+    {
+      "id": 65,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "MSCI US Investable Market Consumer Staples 25/50 Index"
+      }
+    },
+    {
+      "id": 66,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "1990"
+      }
+    },
+    {
+      "id": 67,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "dividends"
+      }
+    },
+    {
+      "id": 68,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "capital gain"
+      }
+    },
+    {
+      "id": 69,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Puttable Bond"
+      }
+    },
+    {
+      "id": 70,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "put option"
+      }
+    },
+    {
+      "id": 71,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "401(k)"
+      }
+    },
+    {
+      "id": 72,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "retirement savings"
+      }
+    },
+    {
+      "id": 73,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Steps to Retirement Planning"
+      }
+    },
+    {
+      "id": 74,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "retirement planning"
+      }
+    },
+    {
+      "id": 75,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "retirement savings options"
+      }
+    },
+    {
+      "id": 76,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Your Home"
+      }
+    },
+    {
+      "id": 77,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "retirement plan"
+      }
+    },
+    {
+      "id": 78,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "spreadsheet"
+      }
+    },
+    {
+      "id": 79,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "budgeting"
+      }
+    },
+    {
+      "id": 80,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "spreadsheet software"
+      }
+    },
+    {
+      "id": 81,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "cash"
+      }
+    },
+    {
+      "id": 82,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "purchase"
+      }
+    },
+    {
+      "id": 83,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Paypal"
+      }
+    },
+    {
+      "id": 84,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "online payment"
+      }
+    },
+    {
+      "id": 85,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "stop-loss order"
+      }
+    },
+    {
+      "id": 86,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "sell orders"
+      }
+    },
+    {
+      "id": 87,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Fundamental analysis"
+      }
+    },
+    {
+      "id": 88,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "intrinsic value"
+      }
+    },
+    {
+      "id": 89,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "technical indicators"
+      }
+    },
+    {
+      "id": 90,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "technical analysis"
+      }
+    },
+    {
+      "id": 91,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Commodity Futures Trading Commission"
+      }
+    },
+    {
+      "id": 92,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "1974"
+      }
+    },
+    {
+      "id": 93,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Commodity Futures Trading Commission (CFTC)"
+      }
+    },
+    {
+      "id": 94,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Hedgers"
+      }
+    },
+    {
+      "id": 95,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "bet"
+      }
+    },
+    {
+      "id": 96,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "rate changes"
+      }
+    },
+    {
+      "id": 97,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "dividend payments"
+      }
+    },
+    {
+      "id": 98,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Fast Fact"
+      }
+    },
+    {
+      "id": 99,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "fundamental analysis"
+      }
+    },
+    {
+      "id": 100,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "financial statement"
+      }
+    },
+    {
+      "id": 101,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "generally accepted accounting principles"
+      }
+    },
+    {
+      "id": 102,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "call option"
+      }
+    },
+    {
+      "id": 103,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "expiration date"
+      }
+    },
+    {
+      "id": 104,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "option"
+      }
+    },
+    {
+      "id": 105,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "seller"
+      }
+    },
+    {
+      "id": 106,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Cryptocurrency"
+      }
+    },
+    {
+      "id": 107,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "blockchain technology"
+      }
+    },
+    {
+      "id": 108,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "blockchain"
+      }
+    },
+    {
+      "id": 109,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "Ethereum"
+      }
+    },
+    {
+      "id": 110,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "proof-of-stake"
+      }
+    },
+    {
+      "id": 111,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "cryptocurrency"
+      }
+    },
+    {
+      "id": 112,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "smart contract"
+      }
+    },
+    {
+      "id": 113,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "cryptocurrencies"
+      }
+    },
+    {
+      "id": 114,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "blockchains"
+      }
+    },
+    {
+      "id": 115,
+      "labels": [
+        "Entity"
+      ],
+      "properties": {
+        "name": "cryptography"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "start": 0,
+      "properties": {
+        "type": "followed by"
+      },
+      "type": "RELATION",
+      "end": 1
+    },
+    {
+      "start": null,
+      "properties": null,
+      "type": null,
+      "end": null
+    },
+    {
+      "start": 2,
+      "properties": {
+        "type": "followed by"
+      },
+      "type": "RELATION",
+      "end": 3
+    },
+    {
+      "start": 3,
+      "properties": {
+        "type": "followed by"
+      },
+      "type": "RELATION",
+      "end": 4
+    },
+    {
+      "start": 5,
+      "properties": {
+        "type": "inception"
+      },
+      "type": "RELATION",
+      "end": 6
+    },
+    {
+      "start": 7,
+      "properties": {
+        "type": "inception"
+      },
+      "type": "RELATION",
+      "end": 6
+    },
+    {
+      "start": 8,
+      "properties": {
+        "type": "followed by"
+      },
+      "type": "RELATION",
+      "end": 9
+    },
+    {
+      "start": 8,
+      "properties": {
+        "type": "has effect"
+      },
+      "type": "RELATION",
+      "end": 9
+    },
+    {
+      "start": 10,
+      "properties": {
+        "type": "followed by"
+      },
+      "type": "RELATION",
+      "end": 11
+    },
+    {
+      "start": 12,
+      "properties": {
+        "type": "followed by"
+      },
+      "type": "RELATION",
+      "end": 11
+    },
+    {
+      "start": 13,
+      "properties": {
+        "type": "inception"
+      },
+      "type": "RELATION",
+      "end": 14
+    },
+    {
+      "start": 15,
+      "properties": {
+        "type": "followed by"
+      },
+      "type": "RELATION",
+      "end": 16
+    },
+    {
+      "start": 16,
+      "properties": {
+        "type": "follows"
+      },
+      "type": "RELATION",
+      "end": 15
+    },
+    {
+      "start": 17,
+      "properties": {
+        "type": "followed by"
+      },
+      "type": "RELATION",
+      "end": 18
+    },
+    {
+      "start": 18,
+      "properties": {
+        "type": "follows"
+      },
+      "type": "RELATION",
+      "end": 17
+    },
+    {
+      "start": 19,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 20
+    },
+    {
+      "start": 21,
+      "properties": {
+        "type": "based on"
+      },
+      "type": "RELATION",
+      "end": 22
+    },
+    {
+      "start": 23,
+      "properties": {
+        "type": "based on"
+      },
+      "type": "RELATION",
+      "end": 24
+    },
+    {
+      "start": 25,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 26
+    },
+    {
+      "start": 27,
+      "properties": {
+        "type": "has effect"
+      },
+      "type": "RELATION",
+      "end": 28
+    },
+    {
+      "start": 29,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 30
+    },
+    {
+      "start": 31,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 32
+    },
+    {
+      "start": 33,
+      "properties": {
+        "type": "based on"
+      },
+      "type": "RELATION",
+      "end": 34
+    },
+    {
+      "start": 35,
+      "properties": {
+        "type": "based on"
+      },
+      "type": "RELATION",
+      "end": 36
+    },
+    {
+      "start": 37,
+      "properties": {
+        "type": "uses"
+      },
+      "type": "RELATION",
+      "end": 38
+    },
+    {
+      "start": 39,
+      "properties": {
+        "type": "followed by"
+      },
+      "type": "RELATION",
+      "end": 40
+    },
+    {
+      "start": 40,
+      "properties": {
+        "type": "follows"
+      },
+      "type": "RELATION",
+      "end": 39
+    },
+    {
+      "start": 41,
+      "properties": {
+        "type": "followed by"
+      },
+      "type": "RELATION",
+      "end": 42
+    },
+    {
+      "start": 42,
+      "properties": {
+        "type": "follows"
+      },
+      "type": "RELATION",
+      "end": 41
+    },
+    {
+      "start": 43,
+      "properties": {
+        "type": "uses"
+      },
+      "type": "RELATION",
+      "end": 44
+    },
+    {
+      "start": 45,
+      "properties": {
+        "type": "influenced by"
+      },
+      "type": "RELATION",
+      "end": 46
+    },
+    {
+      "start": 47,
+      "properties": {
+        "type": "inception"
+      },
+      "type": "RELATION",
+      "end": 48
+    },
+    {
+      "start": 49,
+      "properties": {
+        "type": "inception"
+      },
+      "type": "RELATION",
+      "end": 50
+    },
+    {
+      "start": 51,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 52
+    },
+    {
+      "start": 53,
+      "properties": {
+        "type": "inception"
+      },
+      "type": "RELATION",
+      "end": 54
+    },
+    {
+      "start": 55,
+      "properties": {
+        "type": "inception"
+      },
+      "type": "RELATION",
+      "end": 56
+    },
+    {
+      "start": 57,
+      "properties": {
+        "type": "inception"
+      },
+      "type": "RELATION",
+      "end": 58
+    },
+    {
+      "start": 59,
+      "properties": {
+        "type": "inception"
+      },
+      "type": "RELATION",
+      "end": 54
+    },
+    {
+      "start": 60,
+      "properties": {
+        "type": "has effect"
+      },
+      "type": "RELATION",
+      "end": 61
+    },
+    {
+      "start": 62,
+      "properties": {
+        "type": "based on"
+      },
+      "type": "RELATION",
+      "end": 63
+    },
+    {
+      "start": 62,
+      "properties": {
+        "type": "inception"
+      },
+      "type": "RELATION",
+      "end": 66
+    },
+    {
+      "start": 64,
+      "properties": {
+        "type": "based on"
+      },
+      "type": "RELATION",
+      "end": 65
+    },
+    {
+      "start": 67,
+      "properties": {
+        "type": "has effect"
+      },
+      "type": "RELATION",
+      "end": 68
+    },
+    {
+      "start": 69,
+      "properties": {
+        "type": "uses"
+      },
+      "type": "RELATION",
+      "end": 70
+    },
+    {
+      "start": 71,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 72
+    },
+    {
+      "start": 71,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 74
+    },
+    {
+      "start": 73,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 74
+    },
+    {
+      "start": 75,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 72
+    },
+    {
+      "start": 76,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 77
+    },
+    {
+      "start": 78,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 79
+    },
+    {
+      "start": 80,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 79
+    },
+    {
+      "start": 81,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 82
+    },
+    {
+      "start": 83,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 84
+    },
+    {
+      "start": 85,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 86
+    },
+    {
+      "start": 87,
+      "properties": {
+        "type": "uses"
+      },
+      "type": "RELATION",
+      "end": 88
+    },
+    {
+      "start": 89,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 90
+    },
+    {
+      "start": 91,
+      "properties": {
+        "type": "inception"
+      },
+      "type": "RELATION",
+      "end": 92
+    },
+    {
+      "start": 93,
+      "properties": {
+        "type": "inception"
+      },
+      "type": "RELATION",
+      "end": 92
+    },
+    {
+      "start": 94,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 95
+    },
+    {
+      "start": 96,
+      "properties": {
+        "type": "has effect"
+      },
+      "type": "RELATION",
+      "end": 97
+    },
+    {
+      "start": 97,
+      "properties": {
+        "type": "has cause"
+      },
+      "type": "RELATION",
+      "end": 96
+    },
+    {
+      "start": 98,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 99
+    },
+    {
+      "start": 100,
+      "properties": {
+        "type": "uses"
+      },
+      "type": "RELATION",
+      "end": 101
+    },
+    {
+      "start": 102,
+      "properties": {
+        "type": "uses"
+      },
+      "type": "RELATION",
+      "end": 103
+    },
+    {
+      "start": 103,
+      "properties": {
+        "type": "used by"
+      },
+      "type": "RELATION",
+      "end": 102
+    },
+    {
+      "start": 104,
+      "properties": {
+        "type": "used by"
+      },
+      "type": "RELATION",
+      "end": 105
+    },
+    {
+      "start": 106,
+      "properties": {
+        "type": "uses"
+      },
+      "type": "RELATION",
+      "end": 107
+    },
+    {
+      "start": 106,
+      "properties": {
+        "type": "uses"
+      },
+      "type": "RELATION",
+      "end": 108
+    },
+    {
+      "start": 106,
+      "properties": {
+        "type": "uses"
+      },
+      "type": "RELATION",
+      "end": 114
+    },
+    {
+      "start": 106,
+      "properties": {
+        "type": "uses"
+      },
+      "type": "RELATION",
+      "end": 115
+    },
+    {
+      "start": 107,
+      "properties": {
+        "type": "used by"
+      },
+      "type": "RELATION",
+      "end": 106
+    },
+    {
+      "start": 107,
+      "properties": {
+        "type": "use"
+      },
+      "type": "RELATION",
+      "end": 106
+    },
+    {
+      "start": 108,
+      "properties": {
+        "type": "used by"
+      },
+      "type": "RELATION",
+      "end": 106
+    },
+    {
+      "start": 108,
+      "properties": {
+        "type": "used by"
+      },
+      "type": "RELATION",
+      "end": 111
+    },
+    {
+      "start": 109,
+      "properties": {
+        "type": "uses"
+      },
+      "type": "RELATION",
+      "end": 110
+    },
+    {
+      "start": 110,
+      "properties": {
+        "type": "used by"
+      },
+      "type": "RELATION",
+      "end": 109
+    },
+    {
+      "start": 111,
+      "properties": {
+        "type": "based on"
+      },
+      "type": "RELATION",
+      "end": 108
+    },
+    {
+      "start": 112,
+      "properties": {
+        "type": "used by"
+      },
+      "type": "RELATION",
+      "end": 113
+    },
+    {
+      "start": 114,
+      "properties": {
+        "type": "used by"
+      },
+      "type": "RELATION",
+      "end": 106
+    }
+  ]
+}

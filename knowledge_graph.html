@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 750px;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "1999", "label": "1999", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2000", "label": "2000", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2001", "label": "2001", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2002", "label": "2002", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2003", "label": "2003", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "S\u0026P 500", "label": "S\u0026P 500", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "1900", "label": "1900", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "S\u0026P 500 index", "label": "S\u0026P 500 index", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "recession", "label": "recession", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "expansion", "label": "expansion", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2004-12-31", "label": "2004-12-31", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2005-12-31", "label": "2005-12-31", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2003-12-31", "label": "2003-12-31", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Commonwealth Bank Why do Interest Rates Change?", "label": "Commonwealth Bank Why do Interest Rates Change?", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2008-10-16", "label": "2008-10-16", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "t i", "label": "t i", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "s j", "label": "s j", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Future value", "label": "Future value", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Present value", "label": "Present value", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Annuity derivation", "label": "Annuity derivation", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "annuity", "label": "annuity", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "perpetuity formula", "label": "perpetuity formula", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "annuity formula", "label": "annuity formula", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "continuous compound interest rate equivalent", "label": "continuous compound interest rate equivalent", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Continuous compounding", "label": "Continuous compounding", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Black\u2013Scholes formula", "label": "Black\u2013Scholes formula", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Financial management", "label": "Financial management", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "profits", "label": "profits", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "taxes", "label": "taxes", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "discount rate", "label": "discount rate", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "valuation", "label": "valuation", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "PEG ratio", "label": "PEG ratio", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Stock valuation", "label": "Stock valuation", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Brazilian real", "label": "Brazilian real", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Mexican peso", "label": "Mexican peso", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "euro", "label": "euro", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "dollar", "label": "dollar", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "foreign exchange market", "label": "foreign exchange market", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "currencies", "label": "currencies", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "interim financial statements", "label": "interim financial statements", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "final financial statements", "label": "final financial statements", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "In-dividend date", "label": "In-dividend date", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Ex-dividend date", "label": "Ex-dividend date", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "stock buyback", "label": "stock buyback", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "stock", "label": "stock", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "David Dodd", "label": "David Dodd", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Benjamin Graham", "label": "Benjamin Graham", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Ace Hardware", "label": "Ace Hardware", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Mar 22, 2001", "label": "Mar 22, 2001", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "S\u0026P/Barra Indexes", "label": "S\u0026P/Barra Indexes", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "December 13, 2007", "label": "December 13, 2007", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Hedge fund", "label": "Hedge fund", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "actively managed", "label": "actively managed", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Amsterdam Stock Exchange", "label": "Amsterdam Stock Exchange", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "1602", "label": "1602", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "New York Stock Exchange", "label": "New York Stock Exchange", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "1792", "label": "1792", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Amazon", "label": "Amazon", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "1997", "label": "1997", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Dutch East India Company", "label": "Dutch East India Company", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "debt", "label": "debt", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "cost of debt", "label": "cost of debt", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "SPDR S\u0026P 500 ETF", "label": "SPDR S\u0026P 500 ETF", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "S\u0026P 500 Index", "label": "S\u0026P 500 Index", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "1990", "label": "1990", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Consumer Staples ETF", "label": "Consumer Staples ETF", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MSCI US Investable Market Consumer Staples 25/50 Index", "label": "MSCI US Investable Market Consumer Staples 25/50 Index", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "dividends", "label": "dividends", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "capital gain", "label": "capital gain", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Puttable Bond", "label": "Puttable Bond", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "put option", "label": "put option", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "401(k)", "label": "401(k)", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "retirement savings", "label": "retirement savings", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "retirement planning", "label": "retirement planning", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Steps to Retirement Planning", "label": "Steps to Retirement Planning", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "retirement savings options", "label": "retirement savings options", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Your Home", "label": "Your Home", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "retirement plan", "label": "retirement plan", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "spreadsheet", "label": "spreadsheet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "budgeting", "label": "budgeting", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "spreadsheet software", "label": "spreadsheet software", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "cash", "label": "cash", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "purchase", "label": "purchase", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Paypal", "label": "Paypal", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "online payment", "label": "online payment", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "stop-loss order", "label": "stop-loss order", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "sell orders", "label": "sell orders", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Fundamental analysis", "label": "Fundamental analysis", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "intrinsic value", "label": "intrinsic value", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "technical indicators", "label": "technical indicators", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "technical analysis", "label": "technical analysis", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Commodity Futures Trading Commission", "label": "Commodity Futures Trading Commission", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "1974", "label": "1974", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Commodity Futures Trading Commission (CFTC)", "label": "Commodity Futures Trading Commission (CFTC)", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Hedgers", "label": "Hedgers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "bet", "label": "bet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "rate changes", "label": "rate changes", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "dividend payments", "label": "dividend payments", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Fast Fact", "label": "Fast Fact", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "fundamental analysis", "label": "fundamental analysis", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "financial statement", "label": "financial statement", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "generally accepted accounting principles", "label": "generally accepted accounting principles", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "call option", "label": "call option", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "expiration date", "label": "expiration date", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "option", "label": "option", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "seller", "label": "seller", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Cryptocurrency", "label": "Cryptocurrency", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "blockchain technology", "label": "blockchain technology", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "blockchain", "label": "blockchain", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "blockchains", "label": "blockchains", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "cryptography", "label": "cryptography", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "cryptocurrency", "label": "cryptocurrency", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Ethereum", "label": "Ethereum", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "proof-of-stake", "label": "proof-of-stake", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "smart contract", "label": "smart contract", "shape": "dot", "size": 10}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "cryptocurrencies", "label": "cryptocurrencies", "shape": "dot", "size": 10}]);
+                  edges = new vis.DataSet([{"from": "1999", "label": "followed by", "title": "followed by", "to": "2000", "width": 1}, {"from": "2001", "label": "followed by", "title": "followed by", "to": "2002", "width": 1}, {"from": "2002", "label": "followed by", "title": "followed by", "to": "2003", "width": 1}, {"from": "S\u0026P 500", "label": "inception", "title": "inception", "to": "1900", "width": 1}, {"from": "S\u0026P 500 index", "label": "inception", "title": "inception", "to": "1900", "width": 1}, {"from": "recession", "label": "has effect", "title": "has effect", "to": "expansion", "width": 1}, {"from": "2004-12-31", "label": "followed by", "title": "followed by", "to": "2005-12-31", "width": 1}, {"from": "2003-12-31", "label": "followed by", "title": "followed by", "to": "2005-12-31", "width": 1}, {"from": "Commonwealth Bank Why do Interest Rates Change?", "label": "inception", "title": "inception", "to": "2008-10-16", "width": 1}, {"from": "t i", "label": "followed by", "title": "followed by", "to": "s j", "width": 1}, {"from": "Future value", "label": "followed by", "title": "followed by", "to": "Present value", "width": 1}, {"from": "Annuity derivation", "label": "use", "title": "use", "to": "annuity", "width": 1}, {"from": "perpetuity formula", "label": "based on", "title": "based on", "to": "annuity formula", "width": 1}, {"from": "continuous compound interest rate equivalent", "label": "based on", "title": "based on", "to": "Continuous compounding", "width": 1}, {"from": "Black\u2013Scholes formula", "label": "use", "title": "use", "to": "Financial management", "width": 1}, {"from": "profits", "label": "has effect", "title": "has effect", "to": "taxes", "width": 1}, {"from": "discount rate", "label": "use", "title": "use", "to": "valuation", "width": 1}, {"from": "PEG ratio", "label": "use", "title": "use", "to": "Stock valuation", "width": 1}, {"from": "Brazilian real", "label": "based on", "title": "based on", "to": "Mexican peso", "width": 1}, {"from": "euro", "label": "based on", "title": "based on", "to": "dollar", "width": 1}, {"from": "foreign exchange market", "label": "uses", "title": "uses", "to": "currencies", "width": 1}, {"from": "interim financial statements", "label": "followed by", "title": "followed by", "to": "final financial statements", "width": 1}, {"from": "In-dividend date", "label": "followed by", "title": "followed by", "to": "Ex-dividend date", "width": 1}, {"from": "stock buyback", "label": "uses", "title": "uses", "to": "stock", "width": 1}, {"from": "David Dodd", "label": "influenced by", "title": "influenced by", "to": "Benjamin Graham", "width": 1}, {"from": "Ace Hardware", "label": "inception", "title": "inception", "to": "Mar 22, 2001", "width": 1}, {"from": "S\u0026P/Barra Indexes", "label": "inception", "title": "inception", "to": "December 13, 2007", "width": 1}, {"from": "Hedge fund", "label": "use", "title": "use", "to": "actively managed", "width": 1}, {"from": "Amsterdam Stock Exchange", "label": "inception", "title": "inception", "to": "1602", "width": 1}, {"from": "New York Stock Exchange", "label": "inception", "title": "inception", "to": "1792", "width": 1}, {"from": "Amazon", "label": "inception", "title": "inception", "to": "1997", "width": 1}, {"from": "Dutch East India Company", "label": "inception", "title": "inception", "to": "1602", "width": 1}, {"from": "debt", "label": "has effect", "title": "has effect", "to": "cost of debt", "width": 1}, {"from": "SPDR S\u0026P 500 ETF", "label": "based on", "title": "based on", "to": "S\u0026P 500 Index", "width": 1}, {"from": "SPDR S\u0026P 500 ETF", "label": "inception", "title": "inception", "to": "1990", "width": 1}, {"from": "Consumer Staples ETF", "label": "based on", "title": "based on", "to": "MSCI US Investable Market Consumer Staples 25/50 Index", "width": 1}, {"from": "dividends", "label": "has effect", "title": "has effect", "to": "capital gain", "width": 1}, {"from": "Puttable Bond", "label": "uses", "title": "uses", "to": "put option", "width": 1}, {"from": "401(k)", "label": "use", "title": "use", "to": "retirement savings", "width": 1}, {"from": "401(k)", "label": "use", "title": "use", "to": "retirement planning", "width": 1}, {"from": "Steps to Retirement Planning", "label": "use", "title": "use", "to": "retirement planning", "width": 1}, {"from": "retirement savings options", "label": "use", "title": "use", "to": "retirement savings", "width": 1}, {"from": "Your Home", "label": "use", "title": "use", "to": "retirement plan", "width": 1}, {"from": "spreadsheet", "label": "use", "title": "use", "to": "budgeting", "width": 1}, {"from": "spreadsheet software", "label": "use", "title": "use", "to": "budgeting", "width": 1}, {"from": "cash", "label": "use", "title": "use", "to": "purchase", "width": 1}, {"from": "Paypal", "label": "use", "title": "use", "to": "online payment", "width": 1}, {"from": "stop-loss order", "label": "use", "title": "use", "to": "sell orders", "width": 1}, {"from": "Fundamental analysis", "label": "uses", "title": "uses", "to": "intrinsic value", "width": 1}, {"from": "technical indicators", "label": "use", "title": "use", "to": "technical analysis", "width": 1}, {"from": "Commodity Futures Trading Commission", "label": "inception", "title": "inception", "to": "1974", "width": 1}, {"from": "Commodity Futures Trading Commission (CFTC)", "label": "inception", "title": "inception", "to": "1974", "width": 1}, {"from": "Hedgers", "label": "use", "title": "use", "to": "bet", "width": 1}, {"from": "rate changes", "label": "has effect", "title": "has effect", "to": "dividend payments", "width": 1}, {"from": "Fast Fact", "label": "use", "title": "use", "to": "fundamental analysis", "width": 1}, {"from": "financial statement", "label": "uses", "title": "uses", "to": "generally accepted accounting principles", "width": 1}, {"from": "call option", "label": "uses", "title": "uses", "to": "expiration date", "width": 1}, {"from": "option", "label": "used by", "title": "used by", "to": "seller", "width": 1}, {"from": "Cryptocurrency", "label": "uses", "title": "uses", "to": "blockchain technology", "width": 1}, {"from": "Cryptocurrency", "label": "uses", "title": "uses", "to": "blockchain", "width": 1}, {"from": "Cryptocurrency", "label": "uses", "title": "uses", "to": "blockchains", "width": 1}, {"from": "Cryptocurrency", "label": "uses", "title": "uses", "to": "cryptography", "width": 1}, {"from": "blockchain", "label": "used by", "title": "used by", "to": "cryptocurrency", "width": 1}, {"from": "Ethereum", "label": "uses", "title": "uses", "to": "proof-of-stake", "width": 1}, {"from": "smart contract", "label": "used by", "title": "used by", "to": "cryptocurrencies", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
